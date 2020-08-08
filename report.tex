@@ -1,0 +1,75 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{graphicx}
+
+
+\title{Traffic}
+\author{Amir Khoshbooie}
+\date{August 2020}
+
+\begin{document}
+
+\begin{abstract}
+COVID-19 pandemic has been having a huge effect on aviation, leading to significant decrease in number of flights. We have done some analysis on this effect.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+As the COVID-19 was getting more and more a global issue, lots of effort were made to flatten the curve. Many restrictions were set, many countries closed their borders and people were advised not to taravel. As a result number of flights fell down dramatically.
+
+
+\section{Methods}
+
+\subsection{Dataset}
+
+For this project we have used datasets from www.opensky-network.org  which provides a very rich flight data aggregated with aircraft and flight number information. For each flight,dataset provides following information: callsign, number, icao24, registration, typecode, origin, destination, firstseen, lastseen and day. For this report, our main concern was to count the number of departures per day for \textbf{six choosen airports} in \textbf{north america, europe and asia} from the beggining of February 2020 to the end of May 2020.
+
+\section{Traffic}
+To analyse how significant has the effect of pandemic been on aviation, we used the Python package \emph{Traffic}.
+Figure1 illustrates flight flow for 6 airports.
+\newpage
+\vfill
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{plot1.png}
+    \caption{number of departed flights for 6 airports}
+    \label{fig:mesh1}
+\end{figure}
+\vfill
+\clearpage
+As you can see in Figure1, there has been huge drop in March for all airports.
+
+Now to make this visuallization a bit more global, we have plotted the total number of flights in one single plot. The result is shown in Figure2.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{plot2.png}
+    \caption{total number of flights for six airports in same period of time}
+    \label{fig:mesh1}
+\end{figure}
+
+We have limited our data to only six airports, including more airports will show greater difference.
+
+\newpage
+\vfill
+\section{Conclusions}
+Recent pandemic has been affecting and changing almost every thing in our world. While some of the effects are really negative, specifically on economy, one would say ther has also been some positive consequences, like less air poluttion.
+\vfill
+\clearpage
+\section{References}
+\begin{enumerate}
+  \item @article{olive2019traffic,
+    author={Xavier {Olive}},
+    journal={Journal of Open Source Software},
+    title={traffic, a toolbox for processing and analysing air traffic data},
+    year={2019},
+    volume={4},
+    pages={1518},
+    doi={10.21105/joss.01518},
+    issn={2475-9066},
+}
+\end{enumerate}
+\end{document}
+
+
+
