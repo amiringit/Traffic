@@ -10,7 +10,7 @@ Run `make` to build the report.
 
 software: https://github.com/xoolive/traffic
 
-Paper: oolive, Xavier. “Xoolive/Traffic.” GitHub, github.com/xoolive/traffic.
+Paper: “Xoolive/Traffic.” GitHub, github.com/xoolive/traffic.
 
 
       reference: @article{olive2019traffic,
