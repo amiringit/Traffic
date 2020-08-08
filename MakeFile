@@ -1,0 +1,20 @@
+report.pdf: report.tex plot1.png plot2.png
+	latexmk -pdf
+
+plot1.png: makedata.py countflights.py
+	python3 plot1.py
+
+plot2.png: makedata.py countflights.py
+	python3 plot2.py
+
+.PHONY: clean almost_clean
+
+clean: almost_clean
+	rm plot1.png
+	rm plot2.png
+	rm report.pdf
+
+almost_clean:
+	latexmk -c
+	rm -rf __pycache__
+
